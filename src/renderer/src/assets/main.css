@@ -1,0 +1,44 @@
+/* 全体の背景を透明にする */
+body, html, #root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent !important; /* 必須 */
+  overflow: hidden; /* スクロールバーを出さない */
+}
+
+/* 画像を表示するコンテナ */
+.oshi-container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* 重要: この領域をドラッグ可能にする */
+  -webkit-app-region: drag;
+  
+  /* ドラッグ可能であることをカーソルで示す */
+  cursor: grab;
+}
+
+/* 実際に表示する画像 */
+.oshi-image {
+  max-width: auto;
+  max-height: auto;
+  /* 画像自体はドラッグ（ファイルD&D挙動）させない */
+  user-select: none;
+  -webkit-user-drag: none;
+  
+  /* 画像の縁を滑らかにするなどの装飾があればここに */
+  /* filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)) ;*/
+}
+
+/* ドラッグ中はカーソルを変える */
+.oshi-container:active {
+  cursor: grabbing;
+}
