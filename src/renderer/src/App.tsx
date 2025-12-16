@@ -27,12 +27,22 @@ function App(): React.JSX.Element {
     return Math.floor(images.length / 2)
   })
 
+  // 画像のサイズを管理（初期値250px）
+  const [imageWidth, setImageWidth] = useState(250)
+  const MIN_WIDTH = 100
+  const MAX_WIDTH = 800
+  const STEP_SIZE = 10
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent): void => {
       if (event.key === 'ArrowLeft') {
         setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : images.length - 1))
       } else if (event.key === 'ArrowRight') {
         setCurrentIndex((prevIndex) => (prevIndex < images.length - 1 ? prevIndex + 1 : 0))
+      } else if (event.key === 'ArrowUp') {
+        setImageWidth((prevWidth) => Math.min(prevWidth + STEP_SIZE, MAX_WIDTH))
+      } else if (event.key === 'ArrowDown') {
+        setImageWidth((prevWidth) => Math.max(prevWidth - STEP_SIZE, MIN_WIDTH))
       }
     }
 
@@ -52,7 +62,7 @@ function App(): React.JSX.Element {
 
   return (
     <div className="oshi-container">
-      <img src={images[currentIndex]} width={200} alt="推し" className="oshi-image" />
+      <img src={images[currentIndex]} width={imageWidth} alt="推し" className="oshi-image" />
     </div>
   )
 }
