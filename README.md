@@ -8,18 +8,21 @@ An Electron application with React and TypeScript
 
 ## Project Setup
 
+写真はpictureフォルダ内に入れてください。
+
 ### Install
 
 ```bash
-$ npm install
+$ pnpm install
 ```
 
 ### Development
 
 ```bash
-$ npm run dev
+$ pnpm run dev
 ```
 
+##　お好みで
 ### Build
 
 ```bash

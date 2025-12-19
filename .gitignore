@@ -1,7 +1,14 @@
 node_modules
 dist
 out
-picture
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.bmp
+*.ico
+*.svg
 .DS_Store
 .eslintcache
 *.log*

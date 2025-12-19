@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 
 // pictureフォルダ内のすべてのPNG画像を動的に読み込む
 const imageModules = import.meta.glob<{ default: string }>('./picture/*.PNG', { eager: true })
@@ -29,9 +29,36 @@ function App(): React.JSX.Element {
 
   // 画像のサイズを管理（初期値250px）
   const [imageWidth, setImageWidth] = useState(250)
+  const [imageAspectRatio, setImageAspectRatio] = useState<number | null>(null)
   const MIN_WIDTH = 100
   const MAX_WIDTH = 800
   const STEP_SIZE = 10
+
+  // ウィンドウサイズを更新する関数
+  const updateWindowSize = useCallback((width: number, aspectRatio: number | null): void => {
+    if (aspectRatio && window.api?.setWindowSize) {
+      const height = Math.round(width / aspectRatio)
+      window.api.setWindowSize(width, height)
+    }
+  }, [])
+
+  // 画像がロードされたときにアスペクト比を取得
+  useEffect(() => {
+    const img = new Image()
+    img.src = images[currentIndex]
+    img.onload = () => {
+      const aspectRatio = img.width / img.height
+      setImageAspectRatio(aspectRatio)
+      updateWindowSize(imageWidth, aspectRatio)
+    }
+  }, [currentIndex, images, imageWidth, updateWindowSize])
+
+  // 画像サイズが変更されたときにウィンドウサイズを更新
+  useEffect(() => {
+    if (imageAspectRatio) {
+      updateWindowSize(imageWidth, imageAspectRatio)
+    }
+  }, [imageWidth, imageAspectRatio, updateWindowSize])
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent): void => {

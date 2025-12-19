@@ -1,4 +1,4 @@
-import { app, shell, BrowserWindow } from 'electron'
+import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
@@ -20,6 +20,11 @@ function createWindow(): void {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
     }
+  })
+
+  // ウィンドウサイズを変更するIPCハンドラー
+  ipcMain.handle('set-window-size', (_event, width: number, height: number) => {
+    mainWindow.setSize(width, height)
   })
 
   mainWindow.on('ready-to-show', () => {
