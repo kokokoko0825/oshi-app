@@ -20,17 +20,6 @@ $ pnpm install
 $ pnpm dev
 ```
 
-## 使い方
-
-1. 写真はsrc/renderer/src/にpictureフォルダを作成し、そのフォルダ内に入れてください。
-
-1. ターミナルで`pnpm dev`を入力
-
-1. 十字キー上下で画像サイズを変更できます。
-
-1. 十字キー左右で画像を変更できます。
-
-##　お好みで
 ### Build
 
 ```bash
@@ -44,4 +33,14 @@ $ npm run build:mac
 $ npm run build:linux
 ```
 
-# よい推し活ライフを!
+## Quick Start
+
+1. 写真はsrc/renderer/src/にpictureフォルダを作成し、そのフォルダ内に入れてください。
+
+1. ターミナルで`pnpm dev`を入力
+
+1. 十字キー上下で画像サイズを変更できます。
+
+1. 十字キー左右で画像を変更できます。
+
+## よい推し活ライフを!
