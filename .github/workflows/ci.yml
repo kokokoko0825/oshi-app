@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  setup-and-build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.15.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Ensure Electron binary
+        run: pnpm ensure:electron
+
+      - name: Check Node / Electron alignment
+        run: pnpm check:node-alignment
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm exec electron-vite build

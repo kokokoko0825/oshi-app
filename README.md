@@ -1,46 +1,67 @@
 # oshi-app
 
-An Electron application with React and TypeScript
+Electron + React + TypeScript のデスクトップアプリです。
 
-## Recommended IDE Setup
+## 必要なもの
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+| ツール | バージョン | 備考 |
+| --- | --- | --- |
+| Node.js | **22 または 24**（`^22.14.0 \|\| ^24.0.0`） | Electron 43 は実行時 Node 24。ホストは 22/24 を推奨 |
+| pnpm | 9 以上（推奨 11.15.0） | `corepack enable` 後に自動で揃う |
 
-## Project Setup
+バージョン固定ファイル:
 
-### Install
+- `.nvmrc` / `.node-version` → `22`
+- `package.json` の `engines` / `packageManager`
+- Electron → `43.4.1`
 
-```bash
-$ pnpm install
-```
-
-### Development
-
-```bash
-$ pnpm dev
-```
-
-### Build
+## セットアップ
 
 ```bash
-# For windows
-$ npm run build:win
+git clone https://github.com/kokokoko0825/oshi-app.git
+cd oshi-app
 
-# For macOS
-$ npm run build:mac
+# Node 22 または 24 に合わせる（どれか一つ）
+# nvm use
+# fnm use
+# asdf install && asdf shell node 22
 
-# For Linux
-$ npm run build:linux
+corepack enable
+pnpm install
+pnpm dev
 ```
 
-## Quick Start
+`pnpm install` と `pnpm dev` の前後で Electron 本体の有無を自動チェックします。壊れていればプロジェクト内の `.cache/electron` から再展開します。
 
-1. 写真はsrc/renderer/src/にpictureフォルダを作成し、そのフォルダ内に入れてください。
+## 使い方
 
-1. ターミナルで`pnpm dev`を入力
+1. 画像を `src/renderer/src/picture/` に置く
+2. `pnpm dev`
+3. 十字キー上下でサイズ、左右で画像切替
 
-1. 十字キー上下で画像サイズを変更できます。
+## ビルド
 
-1. 十字キー左右で画像を変更できます。
+```bash
+pnpm build:mac    # macOS
+pnpm build:win    # Windows
+pnpm build:linux  # Linux
+```
 
-## よい推し活ライフを!
+## トラブルシュート
+
+**`Error: Electron uninstall` / `ENOENT .../Electron`**
+
+```bash
+pnpm ensure:electron
+pnpm dev
+```
+
+まだダメなときは `node -v` が 22/24 系か確認し、`rm -rf node_modules .cache && pnpm install` をやり直す。
+
+**`engine-strict` で install が止まる**
+
+Node が 22/24 以外です。`.nvmrc` に合わせてください。
+
+## IDE
+
+- [VSCode](https://code.visualstudio.com/) + ESLint + Prettier

@@ -1,0 +1,47 @@
+# Dependabot: npm / GitHub Actions の更新PRを自動作成する
+# Docs: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '09:00'
+      timezone: Asia/Tokyo
+    open-pull-requests-limit: 10
+    # Electron 系はまとめて1本のPRにするとレビューしやすい
+    groups:
+      electron:
+        patterns:
+          - electron
+          - electron-*
+          - '@electron/*'
+          - '@electron-toolkit/*'
+      react:
+        patterns:
+          - react
+          - react-dom
+          - '@types/react'
+          - '@types/react-dom'
+      vite:
+        patterns:
+          - vite
+          - '@vitejs/*'
+          - electron-vite
+    ignore:
+      # electron-vite@5 は Vite 8 未対応のため、メジャーは手動で上げる
+      - dependency-name: vite
+        update-types: ['version-update:semver-major']
+      # ESLint 10 / TypeScript のメジャーも破壊的になりやすいので手動
+      - dependency-name: eslint
+        update-types: ['version-update:semver-major']
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5

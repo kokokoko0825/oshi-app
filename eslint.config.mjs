@@ -28,5 +28,12 @@ export default defineConfig(
       ...eslintPluginReactRefresh.configs.vite.rules
     }
   },
+  // toolkit 側は `*.mjs`（ルート直下のみ）なので scripts/ に効かない
+  {
+    files: ['**/*.{js,mjs}'],
+    rules: {
+      '@typescript-eslint/explicit-function-return-type': 'off'
+    }
+  },
   eslintConfigPrettier
 )
