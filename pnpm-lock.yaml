@@ -55,8 +55,8 @@ importers:
         specifier: ^7.1.1
         version: 7.1.1(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-react-refresh:
-        specifier: ^0.4.26
-        version: 0.4.26(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))
+        specifier: ^0.5.4
+        version: 0.5.4(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
@@ -1370,10 +1370,10 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0 || ^10.0.0
 
-  eslint-plugin-react-refresh@0.4.26:
-    resolution: {integrity: sha512-1RETEylht2O6FM/MvgnyvT+8K21wLqDNg4qD51Zj3guhjt433XbnnkVttHMyaVyAFD03QSV4LPS5iE3VQmO7XQ==}
+  eslint-plugin-react-refresh@0.5.4:
+    resolution: {integrity: sha512-7bqTKz7T0r+HKWFarNXByDE9/5+73wI2ru+M3zuqGbR7s/b/5/pQJXZoufWlrngqGqoZto73ZkGumCdLxk+4rw==}
     peerDependencies:
-      eslint: '>=8.40'
+      eslint: ^9 || ^10
 
   eslint-plugin-react@7.37.5:
     resolution: {integrity: sha512-Qteup0SqU15kdocexFNAJMvCJEfa2xUKNV4CC1xsVMrIIqEy3SQ/rqyxCWNzfrd3/ldy6HMlD2e0JDVpDg2qIA==}
@@ -1949,8 +1949,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  node-abi@4.34.0:
-    resolution: {integrity: sha512-4Oy5Q6/Ftna9sXyrkdnKypfvm9uWRpxUPvlw4oA192QNMN39aq8k4l36TUUUU/ONw7ivGVi402Ud+UBPVDYh6A==}
+  node-abi@4.33.0:
+    resolution: {integrity: sha512-vLBWCKb+7LWsX+TbfzWOkw0W81m377tyx3hOweBTjO43CXZnRGS1/JPWs20fr0PgZyDXk6ROYrylsEycK8raDA==}
     engines: {node: '>=22.12.0'}
 
   node-api-version@0.2.1:
@@ -2820,7 +2820,7 @@ snapshots:
     dependencies:
       '@malept/cross-spawn-promise': 2.0.0
       debug: 4.4.3(supports-color@7.2.0)
-      node-abi: 4.34.0
+      node-abi: 4.33.0
       node-api-version: 0.2.1
       node-gyp: 12.4.0
       read-binary-file-arch: 1.0.6(supports-color@7.2.0)
@@ -4052,7 +4052,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react-refresh@0.4.26(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0)):
+  eslint-plugin-react-refresh@0.5.4(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       eslint: 9.39.2(jiti@2.7.0)(supports-color@7.2.0)
 
@@ -4677,7 +4677,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  node-abi@4.34.0:
+  node-abi@4.33.0:
     dependencies:
       semver: 7.7.3
 
