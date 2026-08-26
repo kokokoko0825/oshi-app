@@ -23,10 +23,10 @@ importers:
         version: 3.1.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.9.3)
       '@electron-toolkit/tsconfig':
         specifier: ^2.0.0
-        version: 2.0.0(@types/node@22.19.3)
+        version: 2.0.0(@types/node@26.2.0)
       '@types/node':
-        specifier: ^22.19.1
-        version: 22.19.3
+        specifier: ^26.2.0
+        version: 26.2.0
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
@@ -35,7 +35,7 @@ importers:
         version: 19.2.5(@types/react@19.2.18)
       '@vitejs/plugin-react':
         specifier: ^5.1.1
-        version: 5.1.2(supports-color@7.2.0)(vite@7.3.0(@types/node@22.19.3)(jiti@2.7.0))
+        version: 5.1.2(supports-color@7.2.0)(vite@7.3.0(@types/node@26.2.0)(jiti@2.7.0))
       electron:
         specifier: 43.4.1
         version: 43.4.1(supports-color@7.2.0)
@@ -44,7 +44,7 @@ importers:
         version: 26.15.3(electron-builder-squirrel-windows@26.15.3)(supports-color@7.2.0)
       electron-vite:
         specifier: ^5.0.0
-        version: 5.0.0(supports-color@7.2.0)(vite@7.3.0(@types/node@22.19.3)(jiti@2.7.0))
+        version: 5.0.0(supports-color@7.2.0)(vite@7.3.0(@types/node@26.2.0)(jiti@2.7.0))
       eslint:
         specifier: ^9.39.1
         version: 9.39.2(jiti@2.7.0)(supports-color@7.2.0)
@@ -71,7 +71,7 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^7.2.6
-        version: 7.3.0(@types/node@22.19.3)(jiti@2.7.0)
+        version: 7.3.0(@types/node@26.2.0)(jiti@2.7.0)
 
 packages:
 
@@ -827,11 +827,11 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@22.19.3':
-    resolution: {integrity: sha512-1N9SBnWYOJTrNZCdh/yJE+t910Y128BoyY+zBLWhL3r0TYzlTmFdXrPwHL9DyFZmlEXNQQolTZh3KHV31QDhyA==}
-
   '@types/node@24.13.3':
     resolution: {integrity: sha512-Dh8vAsV36ig5wa9OX4pXvMc9D3Veibfw2wix0CUwYODLD8nkj9UsLjASr49nPg+2eKzxhBV+v7L8pXvT4e639Q==}
+
+  '@types/node@26.2.0':
+    resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
 
   '@types/react-dom@19.2.5':
     resolution: {integrity: sha512-fMPwH9v7r/pp43yUd2/Mbiex5KouJwwR3dzHkhLREUC6764VyDsqxhAxv6OFEYR1RhjOyD1naqba8ECDBe7ZQg==}
@@ -1949,8 +1949,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  node-abi@4.34.0:
-    resolution: {integrity: sha512-4Oy5Q6/Ftna9sXyrkdnKypfvm9uWRpxUPvlw4oA192QNMN39aq8k4l36TUUUU/ONw7ivGVi402Ud+UBPVDYh6A==}
+  node-abi@4.33.0:
+    resolution: {integrity: sha512-vLBWCKb+7LWsX+TbfzWOkw0W81m377tyx3hOweBTjO43CXZnRGS1/JPWs20fr0PgZyDXk6ROYrylsEycK8raDA==}
     engines: {node: '>=22.12.0'}
 
   node-api-version@0.2.1:
@@ -2441,11 +2441,11 @@ packages:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
 
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
-
   undici-types@7.18.2:
     resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
+
+  undici-types@8.3.0:
+    resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
   undici@6.28.0:
     resolution: {integrity: sha512-LIY910g9TI13YS95lrMFrs8Rm/u/irgHeTWoKCoteeJ04CUJ92eEfj0rVn+7VKMPBpUPiUoBKfhNyLI23EE/KA==}
@@ -2750,9 +2750,9 @@ snapshots:
     dependencies:
       electron: 43.4.1(supports-color@7.2.0)
 
-  '@electron-toolkit/tsconfig@2.0.0(@types/node@22.19.3)':
+  '@electron-toolkit/tsconfig@2.0.0(@types/node@26.2.0)':
     dependencies:
-      '@types/node': 22.19.3
+      '@types/node': 26.2.0
 
   '@electron-toolkit/utils@4.0.0(electron@43.4.1(supports-color@7.2.0))':
     dependencies:
@@ -2820,7 +2820,7 @@ snapshots:
     dependencies:
       '@malept/cross-spawn-promise': 2.0.0
       debug: 4.4.3(supports-color@7.2.0)
-      node-abi: 4.34.0
+      node-abi: 4.33.0
       node-api-version: 0.2.1
       node-gyp: 12.4.0
       read-binary-file-arch: 1.0.6(supports-color@7.2.0)
@@ -3226,7 +3226,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 22.19.3
+      '@types/node': 26.2.0
       '@types/responselike': 1.0.3
 
   '@types/debug@4.1.12':
@@ -3237,7 +3237,7 @@ snapshots:
 
   '@types/fs-extra@9.0.13':
     dependencies:
-      '@types/node': 22.19.3
+      '@types/node': 26.2.0
 
   '@types/http-cache-semantics@4.0.4': {}
 
@@ -3245,17 +3245,17 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 22.19.3
+      '@types/node': 26.2.0
 
   '@types/ms@2.1.0': {}
-
-  '@types/node@22.19.3':
-    dependencies:
-      undici-types: 6.21.0
 
   '@types/node@24.13.3':
     dependencies:
       undici-types: 7.18.2
+
+  '@types/node@26.2.0':
+    dependencies:
+      undici-types: 8.3.0
 
   '@types/react-dom@19.2.5(@types/react@19.2.18)':
     dependencies:
@@ -3267,7 +3267,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 22.19.3
+      '@types/node': 26.2.0
 
   '@typescript-eslint/eslint-plugin@8.49.0(@typescript-eslint/parser@8.49.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.9.3))(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.9.3)':
     dependencies:
@@ -3360,7 +3360,7 @@ snapshots:
       '@typescript-eslint/types': 8.49.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-react@5.1.2(supports-color@7.2.0)(vite@7.3.0(@types/node@22.19.3)(jiti@2.7.0))':
+  '@vitejs/plugin-react@5.1.2(supports-color@7.2.0)(vite@7.3.0(@types/node@26.2.0)(jiti@2.7.0))':
     dependencies:
       '@babel/core': 7.28.5(supports-color@7.2.0)
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.5(supports-color@7.2.0))
@@ -3368,7 +3368,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.53
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.3.0(@types/node@22.19.3)(jiti@2.7.0)
+      vite: 7.3.0(@types/node@26.2.0)(jiti@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3818,7 +3818,7 @@ snapshots:
 
   electron-to-chromium@1.5.267: {}
 
-  electron-vite@5.0.0(supports-color@7.2.0)(vite@7.3.0(@types/node@22.19.3)(jiti@2.7.0)):
+  electron-vite@5.0.0(supports-color@7.2.0)(vite@7.3.0(@types/node@26.2.0)(jiti@2.7.0)):
     dependencies:
       '@babel/core': 7.28.5(supports-color@7.2.0)
       '@babel/plugin-transform-arrow-functions': 7.27.1(@babel/core@7.28.5(supports-color@7.2.0))
@@ -3826,7 +3826,7 @@ snapshots:
       esbuild: 0.25.12
       magic-string: 0.30.21
       picocolors: 1.1.1
-      vite: 7.3.0(@types/node@22.19.3)(jiti@2.7.0)
+      vite: 7.3.0(@types/node@26.2.0)(jiti@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4677,7 +4677,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  node-abi@4.34.0:
+  node-abi@4.33.0:
     dependencies:
       semver: 7.7.3
 
@@ -5281,9 +5281,9 @@ snapshots:
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
 
-  undici-types@6.21.0: {}
-
   undici-types@7.18.2: {}
+
+  undici-types@8.3.0: {}
 
   undici@6.28.0: {}
 
@@ -5316,7 +5316,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite@7.3.0(@types/node@22.19.3)(jiti@2.7.0):
+  vite@7.3.0(@types/node@26.2.0)(jiti@2.7.0):
     dependencies:
       esbuild: 0.27.1
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5325,7 +5325,7 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 22.19.3
+      '@types/node': 26.2.0
       fsevents: 2.3.3
       jiti: 2.7.0
 
