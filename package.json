@@ -32,14 +32,14 @@
     "@electron-toolkit/utils": "^4.0.0"
   },
   "devDependencies": {
-    "@electron-toolkit/eslint-config-prettier": "^3.0.0",
-    "@electron-toolkit/eslint-config-ts": "^3.1.0",
+    "@electron-toolkit/eslint-config-prettier": "^3.0.1",
+    "@electron-toolkit/eslint-config-ts": "^4.0.0",
     "@electron-toolkit/tsconfig": "^2.0.0",
     "@types/node": "^26.4.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^5.1.1",
-    "electron": "44.0.0",
+    "electron": "44.5.1",
     "electron-builder": "^26.15.3",
     "electron-vite": "^5.0.0",
     "eslint": "^9.39.1",
