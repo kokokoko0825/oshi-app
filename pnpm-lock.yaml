@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@electron-toolkit/eslint-config-prettier':
         specifier: ^3.0.0
-        version: 3.0.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.6)
+        version: 3.0.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.10)
       '@electron-toolkit/eslint-config-ts':
         specifier: ^3.1.0
         version: 3.1.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.9.3)
@@ -58,8 +58,8 @@ importers:
         specifier: ^0.5.5
         version: 0.5.5(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))
       prettier:
-        specifier: ^3.9.6
-        version: 3.9.6
+        specifier: ^3.9.10
+        version: 3.9.10
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -2086,8 +2086,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.9.6:
-    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+  prettier@3.9.10:
+    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2731,12 +2731,12 @@ snapshots:
 
   '@electron-internal/extract-zip@1.0.5': {}
 
-  '@electron-toolkit/eslint-config-prettier@3.0.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.6)':
+  '@electron-toolkit/eslint-config-prettier@3.0.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.10)':
     dependencies:
       eslint: 9.39.2(jiti@2.7.0)(supports-color@7.2.0)
       eslint-config-prettier: 10.1.8(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))
-      eslint-plugin-prettier: 5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.6)
-      prettier: 3.9.6
+      eslint-plugin-prettier: 5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.10)
+      prettier: 3.9.10
     transitivePeerDependencies:
       - '@types/eslint'
 
@@ -4037,10 +4037,10 @@ snapshots:
     dependencies:
       eslint: 9.39.2(jiti@2.7.0)(supports-color@7.2.0)
 
-  eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.6):
+  eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.9.10):
     dependencies:
       eslint: 9.39.2(jiti@2.7.0)(supports-color@7.2.0)
-      prettier: 3.9.6
+      prettier: 3.9.10
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.11
     optionalDependencies:
@@ -4830,7 +4830,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.9.6: {}
+  prettier@3.9.10: {}
 
   proc-log@6.1.0: {}
 
